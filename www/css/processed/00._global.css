@@ -661,7 +661,7 @@
   }
 }
 /* line 21, ../sass/00._global.scss */
-.grid-centered {
+.grid-centered .polaroid {
   float: none;
   margin: 0 auto;
 }
@@ -692,23 +692,25 @@
 }
 
 /* line 38, ../sass/00._global.scss */
+html,
 body {
   background: #680707;
   color: #f7f7f7;
 }
 @media (min-width: 35em) {
   /* line 38, ../sass/00._global.scss */
+  html,
   body {
     background: url(../../img/texture-retina-wood.jpg) repeat;
   }
 }
 
-/* line 47, ../sass/00._global.scss */
+/* line 48, ../sass/00._global.scss */
 img {
   max-width: 100%;
 }
 
-/* line 49, ../sass/00._global.scss */
+/* line 50, ../sass/00._global.scss */
 a {
   color: #4183c4;
   text-decoration: none;
@@ -730,11 +732,11 @@ a:hover {
 a:active {
   color: #265079;
 }
-/* line 55, ../sass/00._global.scss */
+/* line 56, ../sass/00._global.scss */
 a:focus {
   outline: none;
 }
-/* line 56, ../sass/00._global.scss */
+/* line 57, ../sass/00._global.scss */
 a:hover, a:active {
   outline: 0;
 }

@@ -14,3 +14,20 @@ main {
     text-shadow: 1px 1px 0 #FFF;
   }
 }
+
+.s-grid-whole .polaroid {
+  margin: 0 auto;
+
+  /*@include mq($M) {*/
+    /*margin: 0;*/
+  /*}*/
+}
+
+.s-grid-whole .polaroid-details,
+.s-grid-whole .polaroid-booklet {
+  float: left;
+  margin: $spacing /4;
+}
+
+.s-grid-whole .polaroid-details { float: right; }
+

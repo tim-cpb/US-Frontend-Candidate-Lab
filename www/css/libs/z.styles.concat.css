@@ -1459,7 +1459,7 @@ textarea {
   }
 }
 /* line 21, ../sass/00._global.scss */
-.grid-centered {
+.grid-centered .polaroid {
   float: none;
   margin: 0 auto;
 }
@@ -1490,23 +1490,25 @@ textarea {
 }
 
 /* line 38, ../sass/00._global.scss */
+html,
 body {
   background: #680707;
   color: #f7f7f7;
 }
 @media (min-width: 35em) {
   /* line 38, ../sass/00._global.scss */
+  html,
   body {
     background: url(../../img/texture-retina-wood.jpg) repeat;
   }
 }
 
-/* line 47, ../sass/00._global.scss */
+/* line 48, ../sass/00._global.scss */
 img {
   max-width: 100%;
 }
 
-/* line 49, ../sass/00._global.scss */
+/* line 50, ../sass/00._global.scss */
 a {
   color: #4183c4;
   text-decoration: none;
@@ -1528,11 +1530,11 @@ a:hover {
 a:active {
   color: #265079;
 }
-/* line 55, ../sass/00._global.scss */
+/* line 56, ../sass/00._global.scss */
 a:focus {
   outline: none;
 }
-/* line 56, ../sass/00._global.scss */
+/* line 57, ../sass/00._global.scss */
 a:hover, a:active {
   outline: 0;
 }
@@ -1599,63 +1601,66 @@ p {
 .polaroid {
   color: #383838;
   background: #ecebec;
-  padding: 18px 18px 60px;
   width: 261px;
+  padding: 18px 18px 60px;
 }
 /* line 16, ../sass/02._elements.scss */
 .polaroid .polaroid-image {
+  position: relative;
+  z-index: 5;
   width: 225px;
   height: 200px;
   padding: 0;
 }
-/* line 22, ../sass/02._elements.scss */
+/* line 24, ../sass/02._elements.scss */
 .polaroid .icon {
   overflow: hidden;
   text-indent: 100%;
   white-space: nowrap;
 }
 
-/* line 27, ../sass/02._elements.scss */
+/* line 29, ../sass/02._elements.scss */
 .polaroid-logo h1 {
-  background: url(../../img/img-building.jpg) no-repeat top left;
   line-height: 180px;
+  background: url(../../img/img-building.jpg) no-repeat top left;
 }
-/* line 31, ../sass/02._elements.scss */
+/* line 33, ../sass/02._elements.scss */
 .polaroid-logo h1 img {
   padding: 10px;
 }
 
-/* line 36, ../sass/02._elements.scss */
+/* line 38, ../sass/02._elements.scss */
 .polaroid-booklet {
   position: relative;
 }
-/* line 39, ../sass/02._elements.scss */
+/* line 41, ../sass/02._elements.scss */
 .polaroid-booklet h2 {
   overflow: hidden;
   text-indent: 100%;
   white-space: nowrap;
   background: url(../../img/img-booklet.jpg) no-repeat top left;
 }
-/* line 44, ../sass/02._elements.scss */
+/* line 46, ../sass/02._elements.scss */
 .polaroid-booklet .icon-copy-booklet {
   position: absolute;
   top: 170px;
   left: 32px;
+  z-index: 5;
   width: 210px;
   height: 43px;
   padding: 0;
 }
 
-/* line 55, ../sass/02._elements.scss */
+/* line 58, ../sass/02._elements.scss */
 .polaroid-details {
   position: relative;
 }
-/* line 58, ../sass/02._elements.scss */
+/* line 61, ../sass/02._elements.scss */
 .polaroid-details .camera {
   line-height: 200px;
   background: url(../../img/img-camera.jpg) no-repeat top left;
 }
-/* line 63, ../sass/02._elements.scss */
+/* line 66, ../sass/02._elements.scss */
 .polaroid-details .icon-copy-address {
   display: inline-block;
   *display: block;
@@ -1666,7 +1671,7 @@ p {
   margin-left: 12px;
   padding: 0;
 }
-/* line 72, ../sass/02._elements.scss */
+/* line 75, ../sass/02._elements.scss */
 .polaroid-details .icon-copy-time {
   position: absolute;
   bottom: 10px;
@@ -1676,7 +1681,7 @@ p {
   padding: 0;
 }
 
-/* line 83, ../sass/02._elements.scss */
+/* line 86, ../sass/02._elements.scss */
 .btn {
   display: inline-block;
   *display: block;
@@ -1714,7 +1719,7 @@ p {
   color: #c4c4c4;
 }
 
-/* line 97, ../sass/02._elements.scss */
+/* line 100, ../sass/02._elements.scss */
 .btn-no {
   background: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #3b3b3b), color-stop(100%, #313131));
   background: -webkit-linear-gradient(#3b3b3b, #313131);
@@ -1735,6 +1740,26 @@ main {
 /* line 12, ../sass/03._page.scss */
 main h2, main p {
   text-shadow: 1px 1px 0 #FFF;
+}
+
+/* line 18, ../sass/03._page.scss */
+.s-grid-whole .polaroid {
+  margin: 0 auto;
+  /*@include mq($M) {*/
+  /*margin: 0;*/
+  /*}*/
+}
+
+/* line 26, ../sass/03._page.scss */
+.s-grid-whole .polaroid-details,
+.s-grid-whole .polaroid-booklet {
+  float: left;
+  margin: 0.375em;
+}
+
+/* line 32, ../sass/03._page.scss */
+.s-grid-whole .polaroid-details {
+  float: right;
 }
 
 /**

@@ -10,10 +10,12 @@
 .polaroid {
   color: $text-dark;
   background: $bg-light;
-  padding: 18px 18px 60px;
   width: 225px + 18px + 18px;
+  padding: 18px 18px 60px;
 
   & .polaroid-image {
+    position: relative;
+    z-index: 5;
     width: 225px;
     height: 200px;
     padding: 0;
@@ -25,8 +27,8 @@
 
   .polaroid-logo {
     & h1 {
-      background: url(../../img/img-building.jpg) no-repeat top left;
       line-height: 180px; // Adjust to visually center
+      background: url(../../img/img-building.jpg) no-repeat top left;
 
       & img { padding: 10px; }
     }
@@ -45,6 +47,7 @@
       position: absolute;
       top: 170px;
       left: 32px;
+      z-index: 5;
       width: 210px;
       height: 43px;
       padding: 0;

@@ -10,3 +10,23 @@ main {
 main h2, main p {
   text-shadow: 1px 1px 0 #FFF;
 }
+
+/* line 18, ../sass/03._page.scss */
+.s-grid-whole .polaroid {
+  margin: 0 auto;
+  /*@include mq($M) {*/
+  /*margin: 0;*/
+  /*}*/
+}
+
+/* line 26, ../sass/03._page.scss */
+.s-grid-whole .polaroid-details,
+.s-grid-whole .polaroid-booklet {
+  float: left;
+  margin: 0.375em;
+}
+
+/* line 32, ../sass/03._page.scss */
+.s-grid-whole .polaroid-details {
+  float: right;
+}
