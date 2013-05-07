@@ -39,10 +39,12 @@ Use this area to communicate any thought processes, ideas, or challenges you enc
 
 ## Processes
 
+I've documented my process along the way. Lets get started.
+
 1. Discovery
   * Looking through the PSD and code to come up with my approach
   * Deciding to go responsive, why not provide an optimized experience for all devices
-  * Planning, organizing and sketching
+  * Planning, organizing and sketching (see /images/sketch+organize.jpg)
 2. The PSD explodes.
   * Grabbed a [repeatable texture][http://subtlepatterns.com/retina-wood/], closest to that found in the comp, then tweaked to match as close to original as possible.
   * Same as above for the [main content area][http://subtlepatterns.com/white-leather-2/]. Both textures under creative commons license.
@@ -69,6 +71,10 @@ Use this area to communicate any thought processes, ideas, or challenges you enc
     ** Chrome, Firefox, Safari and most other "desktop" browsers set their default to 16px
   * Take a first pass at typography: /css/sass/01._typography.scss
     ** Using a technique for they typography where the font-size and line-height will grow from mobile to desktop breakpoints for readability 
+5. Accessing Semantic Markup
+  * Reworking the markup to be more semantic with HTML5 elements, plus aria roles for accessibility
+  * Building out the Polaroid markup
+  * Looking good without CSS
 
 ## Ideas
 
