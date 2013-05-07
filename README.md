@@ -79,6 +79,10 @@ I've documented my process along the way. Lets get started.
   * Utilizing Sass for styling:
     ** Adding the background texture: 00._global.scss
     ** Building the Polaroids: 02._elements.scss
+    ** Styling the main content with the buttons: 03._page.scss and 02._elements.scss
+    ** Adding base64 white background texture within Sass/CSS.
+  * `grunt icons` ran to optimize SVGs and create PNG fallbacks (see /images/grunt-icons.png)
+  * `grunt minify` ran to compress images (see /images/grunt-minify.png)
 
 ## Ideas
 

@@ -5,3 +5,12 @@
 @import '_modules/mixins';
 @import "compass/css3/box-shadow";
 
+main {
+  color: $text-dark;
+  background: $bg-light url($img-texture-light);
+
+  & h2,
+  & p {
+    text-shadow: 1px 1px 0 #FFF;
+  }
+}

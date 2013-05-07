@@ -1,71 +1,67 @@
 /**
  * elements.scss
  */
-/* line 8, ../sass/02._elements.scss */
+/* line 10, ../sass/02._elements.scss */
 .polaroid {
   color: #383838;
   background: #ecebec;
   padding: 18px 18px 60px;
   width: 261px;
 }
-/* line 14, ../sass/02._elements.scss */
+/* line 16, ../sass/02._elements.scss */
+.polaroid .polaroid-image {
+  width: 225px;
+  height: 200px;
+  padding: 0;
+}
+/* line 22, ../sass/02._elements.scss */
 .polaroid .icon {
   overflow: hidden;
   text-indent: 100%;
   white-space: nowrap;
 }
 
-/* line 18, ../sass/02._elements.scss */
+/* line 27, ../sass/02._elements.scss */
 .polaroid-logo h1 {
   background: url(../../img/img-building.jpg) no-repeat top left;
-  width: 225px;
-  height: 200px;
   line-height: 180px;
-  padding: 0;
 }
-/* line 25, ../sass/02._elements.scss */
+/* line 31, ../sass/02._elements.scss */
 .polaroid-logo h1 img {
   padding: 10px;
 }
 
-/* line 29, ../sass/02._elements.scss */
+/* line 36, ../sass/02._elements.scss */
 .polaroid-booklet {
   position: relative;
 }
-/* line 32, ../sass/02._elements.scss */
+/* line 39, ../sass/02._elements.scss */
 .polaroid-booklet h2 {
   overflow: hidden;
   text-indent: 100%;
   white-space: nowrap;
   background: url(../../img/img-booklet.jpg) no-repeat top left;
-  width: 225px;
-  height: 200px;
 }
-/* line 39, ../sass/02._elements.scss */
+/* line 44, ../sass/02._elements.scss */
 .polaroid-booklet .icon-copy-booklet {
   position: absolute;
   top: 170px;
   left: 32px;
-  overflow: hidden;
-  text-indent: 100%;
-  white-space: nowrap;
   width: 210px;
   height: 43px;
   padding: 0;
 }
 
-/* line 50, ../sass/02._elements.scss */
+/* line 55, ../sass/02._elements.scss */
 .polaroid-details {
   position: relative;
 }
-/* line 53, ../sass/02._elements.scss */
+/* line 58, ../sass/02._elements.scss */
 .polaroid-details .camera {
   line-height: 200px;
   background: url(../../img/img-camera.jpg) no-repeat top left;
-  width: 225px;
-  height: 200px;
 }
-/* line 60, ../sass/02._elements.scss */
+/* line 63, ../sass/02._elements.scss */
 .polaroid-details .icon-copy-address {
   display: inline-block;
   *display: block;
@@ -76,7 +72,7 @@
   margin-left: 12px;
   padding: 0;
 }
-/* line 69, ../sass/02._elements.scss */
+/* line 72, ../sass/02._elements.scss */
 .polaroid-details .icon-copy-time {
   position: absolute;
   bottom: 10px;
@@ -84,4 +80,52 @@
   width: 220px;
   height: 40px;
   padding: 0;
+}
+
+/* line 83, ../sass/02._elements.scss */
+.btn {
+  display: inline-block;
+  *display: block;
+  *zoom: 1;
+  color: #f7f7f7;
+  /*text-shadow: -1px -1px 1px #777;*/
+  margin: 0 0.75em 0.75em 0;
+  padding: .5em 1.75em;
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  -ms-border-radius: 3px;
+  -o-border-radius: 3px;
+  border-radius: 3px;
+  background: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #f7993e), color-stop(100%, #f68533));
+  background: -webkit-linear-gradient(#f7993e, #f68533);
+  background: -moz-linear-gradient(#f7993e, #f68533);
+  background: -o-linear-gradient(#f7993e, #f68533);
+  background: linear-gradient(#f7993e, #f68533);
+  /*&:hover { background: $link; }*/
+}
+/* line 81, ../sass/_modules/_mixins.scss */
+.btn:link {
+  color: #f7f7f7;
+}
+/* line 82, ../sass/_modules/_mixins.scss */
+.btn:visited {
+  color: #f7f7f7;
+}
+/* line 83, ../sass/_modules/_mixins.scss */
+.btn:hover {
+  color: #dedede;
+}
+/* line 84, ../sass/_modules/_mixins.scss */
+.btn:active {
+  color: #c4c4c4;
+}
+
+/* line 97, ../sass/02._elements.scss */
+.btn-no {
+  background: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #3b3b3b), color-stop(100%, #313131));
+  background: -webkit-linear-gradient(#3b3b3b, #313131);
+  background: -moz-linear-gradient(#3b3b3b, #313131);
+  background: -o-linear-gradient(#3b3b3b, #313131);
+  background: linear-gradient(#3b3b3b, #313131);
+  margin-right: 0;
 }

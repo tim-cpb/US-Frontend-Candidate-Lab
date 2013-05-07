@@ -3,6 +3,8 @@
  */
 @import '_modules/vars';
 @import '_modules/mixins';
+@import 'compass/css3/border-radius';
+@import 'compass/css3/images';
 
 
 .polaroid {
@@ -11,20 +13,25 @@
   padding: 18px 18px 60px;
   width: 225px + 18px + 18px;
 
+  & .polaroid-image {
+    width: 225px;
+    height: 200px;
+    padding: 0;
+  }
+
   & .icon { @include image-replacement(); }
 }
+
 
   .polaroid-logo {
     & h1 {
       background: url(../../img/img-building.jpg) no-repeat top left;
-      width: 225px;
-      height: 200px;
       line-height: 180px; // Adjust to visually center
-      padding: 0;
 
       & img { padding: 10px; }
     }
   }
+
 
   .polaroid-booklet {
     position: relative;
@@ -32,20 +39,18 @@
     & h2 {
       @include image-replacement();
       background: url(../../img/img-booklet.jpg) no-repeat top left;
-      width: 225px;
-      height: 200px;
     }
 
     & .icon-copy-booklet {
       position: absolute;
       top: 170px;
       left: 32px;
-      @include image-replacement();
       width: 210px;
       height: 43px;
       padding: 0;
     }
   }
+
 
   .polaroid-details {
     position: relative;
@@ -53,8 +58,6 @@
     & .camera {
       line-height: 200px;
       background: url(../../img/img-camera.jpg) no-repeat top left;
-      width: 225px;
-      height: 200px;
     }
 
     & .icon-copy-address {
@@ -74,4 +77,24 @@
       height: 40px;
       padding: 0;
     }
+  }
+
+
+.btn {
+  @include inline-block();
+  color: $text-light;
+  /*text-shadow: -1px -1px 1px #777;*/
+  margin: 0 ($spacing /2) ($spacing /2) 0;
+  padding: .5em 1.75em;
+
+  @include border-radius(3px);
+  @include background-with-css2-fallback(linear-gradient(#F7993E, #F68533));
+
+  @include link-all-pseudo-elements($text-light);
+  /*&:hover { background: $link; }*/
+}
+
+  .btn-no {
+    @include background-with-css2-fallback(linear-gradient(#3B3B3B, #313131));
+    margin-right: 0;
   }
