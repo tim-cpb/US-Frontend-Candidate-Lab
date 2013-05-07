@@ -58,6 +58,11 @@ Use this area to communicate any thought processes, ideas, or challenges you enc
   * Takeoff is a Gruntjs configuration with a handful of plugins for automated optimized development
     ** I will be releasing this as an open source project (soon)
   * Removing existing CSS and JS files from the project to be merge back in later
+  * Note: If you would like to run the build process you'll need the Grunt CLI plugin installed globally, PhantomJS, SVGO, Sass and Compass installed
+    ** Then run 'npm install' to install Grunt with the plugin dependancies local to the project
+    ** Run 'grunt', 'grunt minify' or 'grunt icons'
+    ** Takeoff is set up to work beautifully with 'grunt watch' and LiveReload or Tincr (Chrome plugin)
+  * Front end tooling FTW (For The Win)
 
 ## Ideas
 
