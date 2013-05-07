@@ -43,14 +43,24 @@ Use this area to communicate any thought processes, ideas, or challenges you enc
   * Looking through the PSD and code to come up with my approach
   * Deciding to go responsive, why not provide an optimized experience for all devices
   * Planning, organizing and sketching
-
+2. The PSD explodes.
+  * Grabbed a [repeatable texture][http://subtlepatterns.com/retina-wood/], closest to that found in the comp, then tweaked to match as close to original as possible.
+  * Same as above for the [main content area][http://subtlepatterns.com/white-leather-2/]. Both textures under creative commons license.
+  * Saved out the images within the Polaroids, rebuilding the images to match the comp as closely as possible. Most likely would have pushed back on creative with some direction to provide better assets.
+  * Pulled out the logo and polaroid text smart objects to save as SVG. Illustrator files used to maintain the copy, normally wouldn't recommend this as it should be in code. Here I wanted to continue to be retina friendly.
+    ** Reworked the address copy, chose a font that was close to the original as the font was raserized.
+  * Didn't save out retina versions of images as assets were too small to maintian the crops in the comp.
+  * Pulled out the color scheme
+    ** TEXT: Body copy: #383838, Headings: #3A3A3A
+    ** BUTTONS: Orange: #F7993E to #F68533, Black: #3B3B3B to #313131
+    ** POLAROIDS: slight variations of #ECEBEC
 
 ## Ideas
 
+* Add RSVP link near the top of the page on mobile (and maybe tablet breakpoints) to jump down to the RSVP buttons
 
 ## Challenges
 
 * Assets delivered within the PSD
 * Copy was rasterized
 * Fonts not included
-
