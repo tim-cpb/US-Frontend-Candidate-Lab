@@ -8,7 +8,7 @@ body {
   /* 15px */
   line-height: 1.6;
 }
-@media (min-width: 35em) {
+@media (min-width: 31em) {
   /* line 9, ../sass/01._typography.scss */
   body {
     font-size: 1em;
@@ -16,7 +16,7 @@ body {
     line-height: 1.75;
   }
 }
-@media (min-width: 55em) {
+@media (min-width: 47em) {
   /* line 9, ../sass/01._typography.scss */
   body {
     font-size: 1.0625em;

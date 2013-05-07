@@ -3,6 +3,9 @@
  */
 @import '_modules/vars';
 @import '_modules/mixins';
+@import 'compass/css3/box-shadow';
+@import 'compass/css3/transform';
+
 
 header {
   position: relative;
@@ -14,7 +17,10 @@ main {
   z-index: 5; // move above the header
   color: $text-dark;
   background: $bg-light url($img-texture-light);
-  border-top: 1px solid $bg-light;
+  border: 1px solid $bg-light;
+  border-left: none;
+
+  @include box-shadow(inset 5px 7px 20px rgba(71, 44, 44, 0.39));
 
   & h2,
   & p {
@@ -22,25 +28,68 @@ main {
   }
 }
 
-.s-grid-whole .polaroid {
+.polaroid {
   margin: -13px auto 0;
 
-
-  /*@include mq($M) {*/
-    /*margin: 0;*/
-  /*}*/
+  @include rotate(-2deg);
 }
 
-.s-grid-whole .polaroid-details,
-.s-grid-whole .polaroid-booklet {
+.polaroid-details,
+.polaroid-booklet {
   position: relative;
   z-index: 5;
   float: left;
   margin: -50px ($spacing /4) ($spacing /4);
 }
 
-.s-grid-whole .polaroid-details {
-  z-index: 1; // keep below the booklet
-  float: right;
-  margin-top: -40px;
+  .polaroid-booklet {
+    @include rotate(2deg);
+
+    @include mq($M) {
+      @include rotate(10deg);
+    }
+
+    @include mq($L) {
+      margin-left: 3em;
+    }
+  }
+
+  .polaroid-details {
+    z-index: 1; // keep below the booklet
+    float: right;
+    margin-top: -40px;
+
+    @include rotate(-5deg);
+
+    @include mq($M) {
+      margin-right: $spacing;
+      @include rotate(-10deg);
+    }
+
+    @include mq($L) {
+      float: right;
+      margin-right: 8em;
+      margin-left: 0;
+      @include rotate(-10deg);
+    }
+  }
+
+.polaroid-extra-boot,
+.polaroid-extra-guy {
+  position: absolute;
+  bottom: -120px;
+  left: 160px;
+
+  @include rotate(8deg);
+
+  @include mq($L) {
+    bottom: -320px;
+    left: auto;
+    right: 200px;
+  }
+}
+
+.polaroid-extra-guy {
+  bottom: -100px;
+  right: -200px;
 }

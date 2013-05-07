@@ -5,21 +5,19 @@
 @import '_modules/mixins';
 @import 'compass/css3/border-radius';
 @import 'compass/css3/images';
-@import "compass/css3/transform";
+@import 'compass/css3/box-shadow';
 
 
+// The following defines how the .polaroid looks
+// .polaroid layout and rotation is in 03._page.scss
 .polaroid {
   color: $text-dark;
   background: $bg-light;
   width: 225px + 18px + 18px;
   padding: 18px 18px 60px;
 
-  @include rotate(-2deg);
-
-  -webkit-box-shadow: 3px 5px 10px 0 #333; /* Android 2.3+, iOS 4.0.2-4.2, Safari 3-4 */
-  -webkit-box-shadow: 3px 5px 10px 0 rgba(10,10,10,.6); /* Android 2.3+, iOS 4.0.2-4.2, Safari 3-4 */
-          box-shadow: 3px 5px 10px 0 #333; /* Chrome 6+, Firefox 4+, IE 9+, iOS 5+, Opera 10.50+ */
-          box-shadow: 3px 5px 10px 0 rgba(10,10,10,.6); /* Chrome 6+, Firefox 4+, IE 9+, iOS 5+, Opera 10.50+ */
+  @include box-shadow(3px 5px 10px 0 #333);
+  @include box-shadow(3px 5px 10px 0 rgba(10,10,10,.6));
 
   & .polaroid-image {
     position: relative;
@@ -44,10 +42,6 @@
 
 
   .polaroid-booklet {
-    position: relative;
-    /*@include rotate(-1deg);*/
-    @include rotate(2deg);
-
     & h2 {
       @include image-replacement();
       background: url(../../img/img-booklet.jpg) no-repeat top left;
@@ -66,9 +60,6 @@
 
 
   .polaroid-details {
-    position: relative;
-    @include rotate(-5deg);
-
     & .camera {
       line-height: 200px;
       background: url(../../img/img-camera.jpg) no-repeat top left;
@@ -97,9 +88,10 @@
 .btn {
   @include inline-block();
   color: $text-light;
+  line-height: 1;
   /*text-shadow: -1px -1px 1px #777;*/
   margin: 0 ($spacing /2) ($spacing /2) 0;
-  padding: .5em 1.75em;
+  padding: ($spacing /1.5) $spacing;
 
   @include border-radius(3px);
   @include background-with-css2-fallback(linear-gradient(#F7993E, #F68533));

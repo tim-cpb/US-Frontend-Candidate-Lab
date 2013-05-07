@@ -4,6 +4,7 @@
 @import '_modules/vars';
 @import '_modules/mixins';
 @import '_vendor/grid.generator';
+@import "compass/css3/transition";
 
 
 // Generate the grid
@@ -31,6 +32,9 @@
  */
 * { -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box;  *behavior: url(boxsizing.htc); }
 
+* {
+  @include transition-duration(0.8s);
+}
 
 ::-moz-selection { background: $bg-dark; color: $text-light; }
 ::selection { background: $bg-dark; color: $text-light; }
@@ -39,6 +43,7 @@ html,
 body {
   background: $bg-dark-red;
   color: $text-light;
+  @include transition-duration(0);
   
   @include mq($M) {
     background: url(../../img/texture-retina-wood.jpg) repeat;

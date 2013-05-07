@@ -94,6 +94,8 @@ For this project I've kept commits within master. Lets get started.
     ** Third, a potential disadvantage are extra DIVs and CLASSes, hopefully not excessive
     ** ESRG project page: http://dfcb.github.io/extra-strength-responsive-grids/
   * Using an OOCSS approach to class naming
+  * Updating breakpoints where the design breaks and continuing with layout to desktop breakpoints
+    ** I've added * {transition:all;} to better see the difference between breakpoints
 
 ## Ideas
 
