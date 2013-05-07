@@ -1,0 +1,42 @@
+// _vars.scss
+
+// Set Breakpoints
+$s-breakpoint: 0;
+$m-breakpoint: 35em; // 16px * 35 = 560px
+$l-breakpoint: 55em; // 16px * 55 = 880px
+
+// Build Media Queries
+//   should match scripts.js
+$S: 'min-width:'+ $s-breakpoint;
+$M: 'min-width:'+ $m-breakpoint;
+$L: 'min-width:'+ $l-breakpoint;
+$header-mq: 'min-width:'+ $header-breakpoint;
+
+
+// Colors
+$bg-dark:  #333;
+$bg-light: #FFF;
+
+$text-dark:  #333;
+$text-light: #EEE;
+
+$link: #4183C4;
+
+
+// Vertical Rhythm (set in 01.typography.scss)
+$vertical-rhythm-base: 16; // required by @mixin get-multiplier()
+$font-size-base: 1em;      // browser default font size, usually 16px
+
+$font-size-h1: $font-size-base *2.5; // 40px
+$font-size-h2: $font-size-base *2;   // 32px
+$font-size-h3: $font-size-base *1.5; // 24px
+$font-size-h4: $font-size-base *1.25;// 20px
+
+
+// Spacing
+$spacing: $font-size-base *1.5;
+
+
+// Base64 Images
+//   Create more at http://base64-image.de by @noreading (twitter)
+$img-texture-light: '';
