@@ -10,17 +10,25 @@ body {
   font-family: Helvetica, Arial, sans-serif;
   color: $text-dark;
 
-  // Set font sizes across breakpoints for readability 
+  // Set font sizes and line height across breakpoints for readability 
 
-                    font-size: $font-size-base *0.9375; /* 15px */
-  @include mq($M) { font-size: $font-size-base;         /* 16px */ }
-  @include mq($L) { font-size: $font-size-base *1.0625; /* 17px */ }
+    font-size: $font-size-base *0.9375; /* 15px */
+    line-height: get-multiplier(24, $font-size-base *0.9375);
+
+  @include mq($M) {
+    font-size: $font-size-base;         /* 16px */
+    line-height: get-multiplier(28, $font-size-base);
+  }
+
+  @include mq($L) {
+    font-size: $font-size-base *1.0625; /* 17px */
+    line-height: get-multiplier(32, $font-size-base *1.0625);
+  }
 }
 
 
 h1, h2, h3, h4, h5, h6 {
-  font-family: 'Open Sans', Helvetica, Arial, sans-serif; 
-  font-weight: 700;
+  font-family: Helvetica, Arial, sans-serif; 
   margin: 0;
   padding: 0;
 }
@@ -33,29 +41,13 @@ h1 {
 
 h2 {
   font-size: $font-size-h2;   // 32px
+  font-weight: normal;
   line-height:    get-multiplier(40, $font-size-h2);
   padding-bottom: get-multiplier(8,  $font-size-h2) +em;
-}
-
-h3 {
-  font-size: $font-size-h3;   // 24px
-  line-height:    get-multiplier(32, $font-size-h3);
-  padding-bottom: get-multiplier(16, $font-size-h3) +em;
-}
-
-h4 {
-  font-size: $font-size-h4;   // 20px
-  line-height:    get-multiplier(24, $font-size-h4);
-  padding-top:    get-multiplier( 6, $font-size-h4) +em;
-  padding-bottom: get-multiplier(18, $font-size-h4) +em;
 }
 
 
 p {
   margin: 0;
   padding: 0 0 $spacing;
-}
-
-strong {
-  color: lighten($text-dark, 10%);
 }

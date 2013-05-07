@@ -10,15 +10,14 @@ $l-breakpoint: 55em; // 16px * 55 = 880px
 $S: 'min-width:'+ $s-breakpoint;
 $M: 'min-width:'+ $m-breakpoint;
 $L: 'min-width:'+ $l-breakpoint;
-$header-mq: 'min-width:'+ $header-breakpoint;
 
 
 // Colors
-$bg-dark:  #333;
-$bg-light: #FFF;
+$bg-dark:  #383838;
+$bg-light: #ECEBEC;
 
-$text-dark:  #333;
-$text-light: #EEE;
+$text-dark:  #383838;
+$text-light: #FFF;
 
 $link: #4183C4;
 
@@ -29,8 +28,6 @@ $font-size-base: 1em;      // browser default font size, usually 16px
 
 $font-size-h1: $font-size-base *2.5; // 40px
 $font-size-h2: $font-size-base *2;   // 32px
-$font-size-h3: $font-size-base *1.5; // 24px
-$font-size-h4: $font-size-base *1.25;// 20px
 
 
 // Spacing
