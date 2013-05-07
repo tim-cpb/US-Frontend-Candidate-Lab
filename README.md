@@ -39,7 +39,11 @@ Use this area to communicate any thought processes, ideas, or challenges you enc
 
 ## Processes
 
-I've documented my process along the way. Lets get started.
+I've documented my process along the way. With git I normally use a feature branching approach, merging branches with --no-ff (no fast forwarding) to maintain the feature branch existence. This is specifically useful when visually reviewing the project commit history with a tool similar to [SourceTree][http://sourcetreeapp.com/]. Additionally I will set up dev and staging tracking branches with master/production. This apporach is similar to the workflow explained [here][http://nvie.com/posts/a-successful-git-branching-model/].
+
+Note that I utilize SourceTree only for visually viewing historical commits/branches. I utilize the command line as much as possible.
+
+For this project I've kept commits within master. Lets get started.
 
 1. Discovery
   * Looking through the PSD and code to come up with my approach
@@ -83,6 +87,13 @@ I've documented my process along the way. Lets get started.
     ** Adding base64 white background texture within Sass/CSS.
   * `grunt icons` ran to optimize SVGs and create PNG fallbacks (see /images/grunt-icons.png)
   * `grunt minify` ran to compress images (see /images/grunt-minify.png)
+7. Layout
+  * For layout I'm using a grid system I helped create called Extra-Strength Responsive Grids (ESRG). Three things about ESRG:
+    ** First, one big advantage is it's self-documenting, so you can quickly tell what's going on when looking at the source or in the web inspector
+    ** Second, it keeps the layout "contained" within the grid CSS (true of all grid systems)
+    ** Third, a potential disadvantage are extra DIVs and CLASSes, hopefully not excessive
+    ** ESRG project page: http://dfcb.github.io/extra-strength-responsive-grids/
+  * Using an OOCSS approach to class naming
 
 ## Ideas
 

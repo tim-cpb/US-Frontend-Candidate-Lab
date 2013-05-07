@@ -1,14 +1,27 @@
 /**
  * elements.scss
  */
-/* line 10, ../sass/02._elements.scss */
+/* line 11, ../sass/02._elements.scss */
 .polaroid {
   color: #383838;
   background: #ecebec;
   width: 261px;
   padding: 18px 18px 60px;
+  -webkit-transform: rotate(-2deg);
+  -moz-transform: rotate(-2deg);
+  -ms-transform: rotate(-2deg);
+  -o-transform: rotate(-2deg);
+  transform: rotate(-2deg);
+  -webkit-box-shadow: 3px 5px 10px 0 #333;
+  /* Android 2.3+, iOS 4.0.2-4.2, Safari 3-4 */
+  -webkit-box-shadow: 3px 5px 10px 0 rgba(10, 10, 10, 0.6);
+  /* Android 2.3+, iOS 4.0.2-4.2, Safari 3-4 */
+  box-shadow: 3px 5px 10px 0 #333;
+  /* Chrome 6+, Firefox 4+, IE 9+, iOS 5+, Opera 10.50+ */
+  box-shadow: 3px 5px 10px 0 rgba(10, 10, 10, 0.6);
+  /* Chrome 6+, Firefox 4+, IE 9+, iOS 5+, Opera 10.50+ */
 }
-/* line 16, ../sass/02._elements.scss */
+/* line 24, ../sass/02._elements.scss */
 .polaroid .polaroid-image {
   position: relative;
   z-index: 5;
@@ -16,35 +29,41 @@
   height: 200px;
   padding: 0;
 }
-/* line 24, ../sass/02._elements.scss */
+/* line 32, ../sass/02._elements.scss */
 .polaroid .icon {
   overflow: hidden;
   text-indent: 100%;
   white-space: nowrap;
 }
 
-/* line 29, ../sass/02._elements.scss */
+/* line 37, ../sass/02._elements.scss */
 .polaroid-logo h1 {
   line-height: 180px;
   background: url(../../img/img-building.jpg) no-repeat top left;
 }
-/* line 33, ../sass/02._elements.scss */
+/* line 41, ../sass/02._elements.scss */
 .polaroid-logo h1 img {
   padding: 10px;
 }
 
-/* line 38, ../sass/02._elements.scss */
+/* line 46, ../sass/02._elements.scss */
 .polaroid-booklet {
   position: relative;
+  /*@include rotate(-1deg);*/
+  -webkit-transform: rotate(2deg);
+  -moz-transform: rotate(2deg);
+  -ms-transform: rotate(2deg);
+  -o-transform: rotate(2deg);
+  transform: rotate(2deg);
 }
-/* line 41, ../sass/02._elements.scss */
+/* line 51, ../sass/02._elements.scss */
 .polaroid-booklet h2 {
   overflow: hidden;
   text-indent: 100%;
   white-space: nowrap;
   background: url(../../img/img-booklet.jpg) no-repeat top left;
 }
-/* line 46, ../sass/02._elements.scss */
+/* line 56, ../sass/02._elements.scss */
 .polaroid-booklet .icon-copy-booklet {
   position: absolute;
   top: 170px;
@@ -55,16 +74,21 @@
   padding: 0;
 }
 
-/* line 58, ../sass/02._elements.scss */
+/* line 68, ../sass/02._elements.scss */
 .polaroid-details {
   position: relative;
+  -webkit-transform: rotate(-5deg);
+  -moz-transform: rotate(-5deg);
+  -ms-transform: rotate(-5deg);
+  -o-transform: rotate(-5deg);
+  transform: rotate(-5deg);
 }
-/* line 61, ../sass/02._elements.scss */
+/* line 72, ../sass/02._elements.scss */
 .polaroid-details .camera {
   line-height: 200px;
   background: url(../../img/img-camera.jpg) no-repeat top left;
 }
-/* line 66, ../sass/02._elements.scss */
+/* line 77, ../sass/02._elements.scss */
 .polaroid-details .icon-copy-address {
   display: inline-block;
   *display: block;
@@ -75,7 +99,7 @@
   margin-left: 12px;
   padding: 0;
 }
-/* line 75, ../sass/02._elements.scss */
+/* line 86, ../sass/02._elements.scss */
 .polaroid-details .icon-copy-time {
   position: absolute;
   bottom: 10px;
@@ -85,7 +109,7 @@
   padding: 0;
 }
 
-/* line 86, ../sass/02._elements.scss */
+/* line 97, ../sass/02._elements.scss */
 .btn {
   display: inline-block;
   *display: block;
@@ -123,7 +147,7 @@
   color: #c4c4c4;
 }
 
-/* line 100, ../sass/02._elements.scss */
+/* line 111, ../sass/02._elements.scss */
 .btn-no {
   background: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #3b3b3b), color-stop(100%, #313131));
   background: -webkit-linear-gradient(#3b3b3b, #313131);

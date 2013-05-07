@@ -3,11 +3,18 @@
  */
 @import '_modules/vars';
 @import '_modules/mixins';
-@import "compass/css3/box-shadow";
+
+header {
+  position: relative;
+  z-index: 1; // keep below the main content
+}
 
 main {
+  position: relative;
+  z-index: 5; // move above the header
   color: $text-dark;
   background: $bg-light url($img-texture-light);
+  border-top: 1px solid $bg-light;
 
   & h2,
   & p {
@@ -16,7 +23,8 @@ main {
 }
 
 .s-grid-whole .polaroid {
-  margin: 0 auto;
+  margin: -13px auto 0;
+
 
   /*@include mq($M) {*/
     /*margin: 0;*/
@@ -25,9 +33,14 @@ main {
 
 .s-grid-whole .polaroid-details,
 .s-grid-whole .polaroid-booklet {
+  position: relative;
+  z-index: 5;
   float: left;
-  margin: $spacing /4;
+  margin: -50px ($spacing /4) ($spacing /4);
 }
 
-.s-grid-whole .polaroid-details { float: right; }
-
+.s-grid-whole .polaroid-details {
+  z-index: 1; // keep below the booklet
+  float: right;
+  margin-top: -40px;
+}
