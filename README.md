@@ -35,6 +35,22 @@ Submit a pull request when you are finished and satisfied with your work.
 
 Use this area to communicate any thought processes, ideas, or challenges you encountered.
 
-*
-*
-*
+***
+
+## Processes
+
+1. Discovery
+  * Looking through the PSD and code to come up with my approach
+  * Deciding to go responsive, why not provide an optimized experience for all devices
+  * Planning, organizing and sketching
+
+
+## Ideas
+
+
+## Challenges
+
+* Assets delivered within the PSD
+* Copy was rasterized
+* Fonts not included
+
