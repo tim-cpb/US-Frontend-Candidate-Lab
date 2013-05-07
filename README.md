@@ -75,6 +75,10 @@ I've documented my process along the way. Lets get started.
   * Reworking the markup to be more semantic with HTML5 elements, plus aria roles for accessibility
   * Building out the Polaroid markup
   * Looking good without CSS
+6. Sassy Decoration
+  * Utilizing Sass for styling:
+    ** Adding the background texture: 00._global.scss
+    ** Building the Polaroids: 02._elements.scss
 
 ## Ideas
 
