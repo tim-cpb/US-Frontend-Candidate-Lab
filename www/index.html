@@ -24,8 +24,8 @@
   <!-- Unicode CSS Loader -->
   <script>/* grunticon Stylesheet Loader | https://github.com/filamentgroup/grunticon | (c) 2012 Scott Jehl, Filament Group, Inc. | MIT license. */
   window.grunticon=function(e){if(e&&3===e.length){var t=window,n=!!t.document.createElementNS&&!!t.document.createElementNS("http://www.w3.org/2000/svg","svg").createSVGRect,A=function(A){var o=t.document.createElement("link"),r=t.document.getElementsByTagName("script")[0];o.rel="stylesheet",o.href=e[A&&n?0:A?1:2],r.parentNode.insertBefore(o,r)},o=new t.Image;o.onerror=function(){A(!1)},o.onload=function(){A(1===o.width&&1===o.height)},o.src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///ywAAAAAAQABAAACAUwAOw=="}};
-  grunticon( [ "/css/min/icons/icons.data.svg.css", "/css/min/icons/icons.data.png.css", "/css/min/icons/icons.fallback.css" ] );</script>
-  <noscript><link href="/css/min/icons/icons.fallback.css" rel="stylesheet"></noscript>
+  grunticon( [ "css/min/icons/icons.data.svg.css", "css/min/icons/icons.data.png.css", "css/min/icons/icons.fallback.css" ] );</script>
+  <noscript><link href="css/min/icons/icons.fallback.css" rel="stylesheet"></noscript>
 
   <!--[if lte IE 7]><script src="fonts/iconfont/lte-ie7.js"></script><![endif]-->
 </head>
@@ -37,16 +37,16 @@
 
 
   <header role="banner">
-    <div class="polaroid"><h1>MDC Partners - Polaroid Celebration</h1></div>
+    <div class="polaroid polaroid-logo"><h1><img src="css/custom/icons/logo.svg" alt="MDC Partners - Polaroid Celebration"></h1></div>
 
-    <div class="polaroid">
+    <div class="polaroid polaroid-booklet">
       <h2>Instant - The Story of Polaroid</h2>
-      <p>Book signing &amp; Cocktail Hour of <em>Instant</em>—The Story of Polaroid by author Christopher Bonanos.</p>
+      <p class="icon icon-copy-booklet">Book signing &amp; Cocktail Hour of <em>Instant</em>—The Story of Polaroid by author Christopher Bonanos.</p>
     </div>
 
-    <div class="polaroid">
-      <p>October 30th – The MDC Innovation Centre, 745 5th Ave., 19th Floor</p>
-      <p>From 6 to 8 or until the pictures get blurry</p>
+    <div class="polaroid polaroid-details">
+      <div class="camera"><p class="icon icon-copy-address">October 30th – The MDC Innovation Centre, 745 5th Ave., 19th Floor</p></div>
+        <p class="icon icon-copy-time">From 6 to 8 or until the pictures get blurry</p>
     </div>
   </header>
 

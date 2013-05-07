@@ -36,7 +36,12 @@
 ::selection { background: $bg-dark; color: $text-light; }
 
 body {
-  background: $bg-light;
+  background: $bg-dark-red;
+  color: $text-light;
+  
+  @include mq($M) {
+    background: url(../../img/texture-retina-wood.jpg) repeat;
+  }
 }
 
 img { max-width: 100%; }
