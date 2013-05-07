@@ -54,6 +54,10 @@ Use this area to communicate any thought processes, ideas, or challenges you enc
     ** TEXT: Body copy: #383838, Headings: #3A3A3A
     ** BUTTONS: Orange: #F7993E to #F68533, Black: #3B3B3B to #313131
     ** POLAROIDS: slight variations of #ECEBEC
+3. Takeoff integration
+  * Takeoff is a Gruntjs configuration with a handful of plugins for automated optimized development
+    ** I will be releasing this as an open source project (soon)
+  * Removing existing CSS and JS files from the project to be merge back in later
 
 ## Ideas
 
