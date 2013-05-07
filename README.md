@@ -63,6 +63,12 @@ Use this area to communicate any thought processes, ideas, or challenges you enc
     ** Run 'grunt', 'grunt minify' or 'grunt icons'
     ** Takeoff is set up to work beautifully with 'grunt watch' and LiveReload or Tincr (Chrome plugin)
   * Front end tooling FTW (For The Win)
+4. Initialize Project
+  * Set Sass vars, specifically color and typography: /css/sass/_vendor/_vars.scss
+    ** Deciding to go with the browser default font size, as creators of mobile devices pick sensibile defaults.
+    ** Chrome, Firefox, Safari and most other "desktop" browsers set their default to 16px
+  * Take a first pass at typography: /css/sass/01._typography.scss
+    ** Using a technique for they typography where the font-size and line-height will grow from mobile to desktop breakpoints for readability 
 
 ## Ideas
 
