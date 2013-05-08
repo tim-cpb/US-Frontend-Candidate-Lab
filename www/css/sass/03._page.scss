@@ -31,10 +31,9 @@ header {
     bottom: 110px;
     left: 50%;
     z-index: 1;
+    display: none;
     padding-left: 148px;
   }
-
-  @include mq($L) { display: none; }
 }
 
 
@@ -61,23 +60,12 @@ header {
   }
 }
 
-/*.container-polaroid {*/
-  /*@include mq($M) {*/
-    /*margin-top: -50px;*/
-  /*}*/
-
-  /*@include mq($L) {*/
-    /*margin-top: -70px;*/
-  /*}*/
-/*}*/
 
 .polaroid {
   position: relative;
   z-index: 1;
   float: none;
   margin: 0 auto;
-
-  /*margin: -13px auto 0;*/
 
   @include mq($M) { @include rotate(-3deg); } 
   @include mq($L) { @include rotate(-2deg); }
@@ -91,8 +79,6 @@ header {
 }
 
 .polaroid-booklet {
-  /*margin-top: -$spacing;*/
-
   @include mq($M) {
     float: left;
     margin: 0;
@@ -121,45 +107,12 @@ header {
   }
 }
 
-/*.polaroid-details,*/
-/*.polaroid-booklet {*/
-  /*position: relative;*/
-  /*z-index: 5;*/
-  /*float: left;*/
-  /*margin: -50px ($spacing /4) ($spacing /4);*/
-/*}*/
 
-  /*.polaroid-booklet {*/
-    /*@include rotate(2deg);*/
+.container-polaroid-extras {
+  display: none;
 
-    /*@include mq($M) {*/
-      /*@include rotate(10deg);*/
-    /*}*/
-
-    /*@include mq($L) {*/
-      /*margin-left: 4em;*/
-    /*}*/
-  /*}*/
-
-  /*.polaroid-details {*/
-    /*z-index: 1; // keep below the booklet*/
-    /*float: right;*/
-    /*margin-top: -40px;*/
-
-    /*@include rotate(-5deg);*/
-
-    /*@include mq($M) {*/
-      /*margin-right: $spacing;*/
-      /*@include rotate(-10deg);*/
-    /*}*/
-
-    /*@include mq($L) {*/
-      /*float: right;*/
-      /*margin-right: $spacing *3;*/
-      /*margin-left: 0;*/
-      /*@include rotate(-10deg);*/
-    /*}*/
-  /*}*/
+  @include mq($L) { display: block; }
+}
 
 .polaroid-extra-boot,
 .polaroid-extra-guy {
@@ -176,25 +129,6 @@ header {
   @include rotate(11deg);
 }
 
-/*.polaroid-extra-boot,*/
-/*.polaroid-extra-guy {*/
-  /*position: absolute;*/
-  /*bottom: -120px;*/
-  /*left: 160px;*/
-
-  /*@include rotate(8deg);*/
-
-  /*@include mq($L) {*/
-    /*bottom: -320px;*/
-    /*left: auto;*/
-    /*right: 200px;*/
-  /*}*/
-/*}*/
-
-/*.polaroid-extra-guy {*/
-  /*bottom: -100px;*/
-  /*right: -200px;*/
-/*}*/
 
 main {
   position: relative;

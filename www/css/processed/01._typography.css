@@ -41,13 +41,14 @@ h1 {
 
 /* line 41, ../sass/01._typography.scss */
 h2 {
+  font-family: 'Oswald', Helvetica, Arial, sans-serif;
   font-size: 2em;
   font-weight: normal;
   line-height: 1.25;
   padding-bottom: 0.25em;
 }
 
-/* line 49, ../sass/01._typography.scss */
+/* line 50, ../sass/01._typography.scss */
 p {
   margin: 0;
   padding: 0 0 1.5em;

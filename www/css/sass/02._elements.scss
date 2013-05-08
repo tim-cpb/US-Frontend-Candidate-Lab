@@ -104,8 +104,11 @@
 
   &:hover {
     text-shadow: none;
-    /*@include background-with-css2-fallback(linear-gradient(#F7993E, #F68533));*/
     @include background-with-css2-fallback(linear-gradient(#E27E1E, #C05101));
+  }
+
+  &.selected {
+    @include background-with-css2-fallback(linear-gradient($text-success, #144E19));
   }
 }
 
@@ -125,4 +128,14 @@
     width: auto;
     margin: 0;
   }
+}
+
+
+.message {
+  color: $text-success;
+  background: $bg-success;
+  border: 1px solid $border-success;
+  margin: 0 0 ($spacing /2);
+
+  @include border-radius(6px);
 }

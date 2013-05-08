@@ -39,6 +39,7 @@ h1 {
 }
 
 h2 {
+  font-family: 'Oswald', Helvetica, Arial, sans-serif; 
   font-size: $font-size-h2;   // 32px
   font-weight: normal;
   line-height:    get-multiplier(40, $font-size-h2);

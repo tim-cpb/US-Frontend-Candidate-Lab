@@ -3,134 +3,60 @@
  */
 /*global Modernizr:true, enquire:true*/
 
-//// add matchMedia support, specifically for enquire.js
-//Modernizr.load([
-  //{
-    //test: window.matchMedia,
-    //nope: ['../libs/matchMedia.js', '../libs/matchMedia.addListener.js']
-  //}
-//]);
+
+// Add Google Webfont Oswald
+// Using the JS version so the page isn't blocked while downloading
+var WebFontConfig = {
+  google: { families: [ 'Oswald::latin' ] }
+};
+(function() {
+  var wf = document.createElement('script');
+  wf.src = ('https:' === document.location.protocol ? 'https' : 'http') +
+    '://ajax.googleapis.com/ajax/libs/webfont/1/webfont.js';
+  wf.type = 'text/javascript';
+  wf.async = 'true';
+  var s = document.getElementsByTagName('script')[0];
+  s.parentNode.insertBefore(wf, s);
+})();
+
 
 
 (function($) {
+  
+  var $main = $('main');
 
-  //var $callout = $('.callout-project'),
-      //// define media queries (should match _vars.scss)
-      //sm_mq      = 'screen and (min-width: 0) and (max-width: 35em)',
-      //header_mq  = 'screen and (min-width: 0) and (max-width: 45em)',
-      //med_mq     = 'screen and (min-width: 45em) and (max-width: 72em)',
-      //lg_mq      = 'screen and (min-width: 72em)',
-      //$hero = $('.container-hero'),
-      //$img,
-      //img_path,
-      //onHeroImageLoaded,
-      //manageFitText;
+  /**
+   * RSVP click()
+   */
+  $('.btn-rsvp').on('click', function(e) {
+    e.preventDefault();
+    $('html, body').animate({scrollTop: $('#rsvp').offset().top}, 600, 'linear');
+  });
 
 
   /**
-   * onHeroImageLoaded()
+   * Button click()
    */
-  //onHeroImageLoaded = function() {
-    //enquire.register(header_mq, {
-      //match:   function() { $hero.find('img').fadeIn(800); },
-      //unmatch: function() { $hero.find('img').fadeOut(400); }
-    //});
-  //};
+  $main.find('.btn').on('click', function(e) {
+    e.preventDefault(); // vars would get hoisted to the top of the function declaration
 
+    var $btn = $(this), // prefix jQuery variables with $ to signify a jQuery object
+        msgText = "Thank you for RSVP'ing.";
 
-  //if ($hero.length > 0) {
-    //img_path = $hero.data('hero-image');
-    //if (img_path) {
-      //$img = $('<img id="hero" src="'+ img_path +'" alt="" style="display:none;">');
-      ////$img = $('<img id="hero" src="'+ img_path +'" alt="" style="display:none;">');
-      //$hero.prepend($img.imagesLoaded(onHeroImageLoaded));
-    //}
-  //}
+    // reset, remove any previously existing messages or selections
+    $('.message').remove();
+    $('.selected').removeClass('selected');
 
+    $btn.addClass('selected');
 
+    if ($btn.hasClass('btn-yes')) {
+      msgText += ' We look forward to seeing you, don\'t forget your camera!';
+    } else {
+      msgText += ' Sorry we won\'t be seeing you.';
+    }
 
-  /**
-   * manageFitText
-   */
-  //manageFitText = {
-    //destroySingle: function($callout) {
-      //$(window).off('.FitText');
-      //$callout.css('font-size', '');
-    //},
-
-    //destroyStacked: function($callout) {
-      //$(window).off('.FitText');
-      //$callout.find('span').css('font-size', '');
-      //$callout.find('em').css('font-size', '');
-    //},
-
-    //initSingle: function($callout) {
-      //$callout.fitText(2.15);
-    //},
-
-    //initStacked: function($callout) {
-      //$callout.find('span').fitText(0.9);
-      //$callout.find('em').fitText(1.275);
-      //setTimeout(function() { $(window).resize(); }, 500); // trigger resize to avoid any hangups
-    //}
-  //};
-
-
-  //enquire.register(header_mq, {
-    //match: function() {
-      //manageFitText.destroySingle($callout);
-      //manageFitText.initStacked($callout);
-    //}
-  //});
-
-  //enquire.register(med_mq, {
-    //match: function() {
-      //manageFitText.destroyStacked($callout);
-      //manageFitText.initSingle($callout);
-    //}
-  //});
-
-  //enquire.register(lg_mq, {
-    //match: function() {
-      //manageFitText.destroySingle($callout);
-      //manageFitText.initStacked($callout);
-    //}
-  //});
-
-
-/*
-  // Smart Resize
-  (function($,sr){
-    // debouncing function from John Hann
-    // http://unscriptable.com/index.php/2009/03/20/debouncing-javascript-methods/
-    var debounce = function (func, threshold, execAsap) {
-      var timeout;
-      return function debounced () {
-        var obj = this, args = arguments;
-        function delayed () {
-          if (!execAsap) { func.apply(obj, args); }
-          timeout = null;
-        }
-        if (timeout)       { clearTimeout(timeout); }
-        else if (execAsap) { func.apply(obj, args); }
-
-        timeout = setTimeout(delayed, threshold || 100);
-      };
-    };
-
-    jQuery.fn[sr] = function(fn){  return fn ? this.bind('resize', debounce(fn)) : this.trigger(sr); };
-  })(jQuery,'smartresize');
-
-  var equalizeHeights = function() {
-        $('#intro').equalize();
-      };
-
-  $('#intro-featured').imagesLoaded(equalizeHeights);
-
-  // re-equalize on resize
-  $(window).smartresize(function(){ equalizeHeights(); });
-*/
-
+    $main.find('p').after('<p class="message padded">'+ msgText +'</p>');
+  });
 
 
 }(jQuery));

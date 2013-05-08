@@ -97,13 +97,32 @@ For this project I've kept commits within master. Lets get started.
   * Updating breakpoints where the design breaks and continuing with layout to desktop breakpoints
     ** I've added * {transition:all;} to better see the difference between breakpoints
   * Finished the layout
+8. Javascript Interactions
+  * Upgraded to the latest version of jQuery with IE support.
+  * If I had more time I would have used a templating engine to show my experience with those.
+  * I also would have written a better module pattern solution
+  * For now I've integrated a simple jQuery click handler to display a message to provide user feedback
+  * Note: I'm leaving the full Modernizr build in the code, this should be limited to only what's used, which at this point is only the shiv.
+9. Final updates
+  * Added the Google Font Oswald, for the headings since the font was not provided.
+  * Tested on Devices: Motorola Xoom, iPhone 3G and Galaxy S.
+
+### Progressive Enhancements
+
+* Content first, Mobile First
+* Using an additive approach with media queries to add layout and enhance with CSS
+* Adding Google Font with the JS solution so the page isn't blocked while page is downloading
 
 ## Ideas
 
 * Add RSVP link near the top of the page on mobile (and maybe tablet breakpoints) to jump down to the RSVP buttons
+* Add icons with icomoon.io, didn't have enough time to implement, but the icons are in the project (css/fonts/icomoon)
+* Minimize the number of different fonts, this should normally be 1-3, but fonts were not provided so I implemented a few different solutions
+* Only display and load assets for the extra Polaroids for the desktop breakpoint, using a lazy loading solution.
 
 ## Challenges
 
+* Limited time, would have liked to included more Javascript
 * Assets delivered within the PSD
 * Copy was rasterized
 * Fonts not included
