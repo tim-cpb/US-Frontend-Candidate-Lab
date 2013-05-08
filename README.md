@@ -9,7 +9,7 @@ Please use this as a way to communicate through your craft.
 # Setup
 
 1. Fork this repo and clone to your computer
-2. Setup the project in your prefered IDE
+2. Setup the project in your preferred IDE
 3. View index.html in the browser (/www)
 4. Open the psd file in /psd (/psd)
 
@@ -39,7 +39,7 @@ Use this area to communicate any thought processes, ideas, or challenges you enc
 
 ## Processes
 
-I've documented my process along the way. With git I normally use a feature branching approach, merging branches with --no-ff (no fast forwarding) to maintain the feature branch existence. This is specifically useful when visually reviewing the project commit history with a tool similar to [SourceTree][http://sourcetreeapp.com/]. Additionally I will set up dev and staging tracking branches with master/production. This apporach is similar to the workflow explained [here][http://nvie.com/posts/a-successful-git-branching-model/].
+I've documented my process along the way. With git I normally use a feature branching approach, merging branches with --no-ff (no fast forwarding) to maintain the feature branch existence. This is specifically useful when visually reviewing the project commit history with a tool similar to [SourceTree][http://sourcetreeapp.com/]. Additionally I will set up dev and staging tracking branches with master/production. This approach is similar to the workflow explained [here][http://nvie.com/posts/a-successful-git-branching-model/].
 
 Note that I utilize SourceTree only for visually viewing historical commits/branches. I utilize the command line as much as possible.
 
@@ -54,8 +54,8 @@ For this project I've kept commits within master. Lets get started.
   * Same as above for the [main content area][http://subtlepatterns.com/white-leather-2/]. Both textures under creative commons license.
   * Saved out the images within the Polaroids, rebuilding the images to match the comp as closely as possible. Most likely would have pushed back on creative with some direction to provide better assets.
   * Pulled out the logo and polaroid text smart objects to save as SVG. Illustrator files used to maintain the copy, normally wouldn't recommend this as it should be in code. Here I wanted to continue to be retina friendly.
-    ** Reworked the address copy, chose a font that was close to the original as the font was raserized.
-  * Didn't save out retina versions of images as assets were too small to maintian the crops in the comp.
+    ** Reworked the address copy, chose a font that was close to the original as the font was rasterized.
+  * Didn't save out retina versions of images as assets were too small to maintain the crops in the comp.
   * Pulled out the color scheme
     ** TEXT: Body copy: #383838, Headings: #3A3A3A
     ** BUTTONS: Orange: #F7993E to #F68533, Black: #3B3B3B to #313131
@@ -106,6 +106,8 @@ For this project I've kept commits within master. Lets get started.
 9. Final updates
   * Added the Google Font Oswald, for the headings since the font was not provided.
   * Tested on Devices: Motorola Xoom, iPhone 3G and Galaxy S.
+  * Added a Javascript snippet to scroll the address bar up on mobile browsers
+    ** And scrolling down after RSVP'ing, it's possible on mobile to RSVP and not see the message or have the buttons disappear, now they scroll into view
 
 ### Progressive Enhancements
 
