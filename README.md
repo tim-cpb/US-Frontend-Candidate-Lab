@@ -96,6 +96,7 @@ For this project I've kept commits within master. Lets get started.
   * Using an OOCSS approach to class naming
   * Updating breakpoints where the design breaks and continuing with layout to desktop breakpoints
     ** I've added * {transition:all;} to better see the difference between breakpoints
+  * Finished the layout
 
 ## Ideas
 

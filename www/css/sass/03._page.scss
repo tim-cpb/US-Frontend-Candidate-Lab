@@ -7,10 +7,194 @@
 @import 'compass/css3/transform';
 
 
+.wrapper {
+  position: relative;
+  overflow: hidden;
+  height: 100%;
+  
+  @include mq($L) {
+    padding-bottom: $spacing *3;
+  }
+}
+
+
 header {
   position: relative;
   z-index: 1; // keep below the main content
 }
+
+.container-btn {
+  padding-top: $spacing;
+
+  @include mq($M) {
+    position: absolute;
+    bottom: 110px;
+    left: 50%;
+    z-index: 1;
+    padding-left: 148px;
+  }
+
+  @include mq($L) { display: none; }
+}
+
+
+.container-polaroid {
+  position: relative;
+  z-index: 10;
+}
+
+.container-polaroid-logo {
+  @include mq($M) {
+    position: relative;
+    z-index: 5;
+    overflow: hidden;
+    clear: both;
+    float: none;
+    margin: 0 auto -104px;
+    width: 561px; // pixel value because the polaroids are pixel values
+  }
+
+  @include mq($L) {
+    float: left;
+    width: auto;
+    margin: 0;
+  }
+}
+
+/*.container-polaroid {*/
+  /*@include mq($M) {*/
+    /*margin-top: -50px;*/
+  /*}*/
+
+  /*@include mq($L) {*/
+    /*margin-top: -70px;*/
+  /*}*/
+/*}*/
+
+.polaroid {
+  position: relative;
+  z-index: 1;
+  float: none;
+  margin: 0 auto;
+
+  /*margin: -13px auto 0;*/
+
+  @include mq($M) { @include rotate(-3deg); } 
+  @include mq($L) { @include rotate(-2deg); }
+}
+
+.polaroid-logo {
+  @include mq($L) {
+    margin: 0;
+    margin-top: $spacing;
+  }
+}
+
+.polaroid-booklet {
+  /*margin-top: -$spacing;*/
+
+  @include mq($M) {
+    float: left;
+    margin: 0;
+    @include rotate(2deg);
+  }
+
+  @include mq($L) {
+    @include rotate(1deg);
+    margin: 60px 0 0 -35px;
+  }
+}
+
+.polaroid-details {
+  margin-top: $spacing;
+  margin-bottom: $spacing /2;
+
+  @include mq($M) {
+    float: right;
+    margin: 0;
+  }
+
+  @include mq($L) {
+    float: left;
+    margin: 10px 0 0 15px;
+    @include rotate(2deg);
+  }
+}
+
+/*.polaroid-details,*/
+/*.polaroid-booklet {*/
+  /*position: relative;*/
+  /*z-index: 5;*/
+  /*float: left;*/
+  /*margin: -50px ($spacing /4) ($spacing /4);*/
+/*}*/
+
+  /*.polaroid-booklet {*/
+    /*@include rotate(2deg);*/
+
+    /*@include mq($M) {*/
+      /*@include rotate(10deg);*/
+    /*}*/
+
+    /*@include mq($L) {*/
+      /*margin-left: 4em;*/
+    /*}*/
+  /*}*/
+
+  /*.polaroid-details {*/
+    /*z-index: 1; // keep below the booklet*/
+    /*float: right;*/
+    /*margin-top: -40px;*/
+
+    /*@include rotate(-5deg);*/
+
+    /*@include mq($M) {*/
+      /*margin-right: $spacing;*/
+      /*@include rotate(-10deg);*/
+    /*}*/
+
+    /*@include mq($L) {*/
+      /*float: right;*/
+      /*margin-right: $spacing *3;*/
+      /*margin-left: 0;*/
+      /*@include rotate(-10deg);*/
+    /*}*/
+  /*}*/
+
+.polaroid-extra-boot,
+.polaroid-extra-guy {
+  position: absolute;
+  bottom: 120px;
+  left: 930px;
+
+  @include rotate(-15deg);
+}
+
+.polaroid-extra-boot {
+  left: 560px;
+  bottom: 35px;
+  @include rotate(11deg);
+}
+
+/*.polaroid-extra-boot,*/
+/*.polaroid-extra-guy {*/
+  /*position: absolute;*/
+  /*bottom: -120px;*/
+  /*left: 160px;*/
+
+  /*@include rotate(8deg);*/
+
+  /*@include mq($L) {*/
+    /*bottom: -320px;*/
+    /*left: auto;*/
+    /*right: 200px;*/
+  /*}*/
+/*}*/
+
+/*.polaroid-extra-guy {*/
+  /*bottom: -100px;*/
+  /*right: -200px;*/
+/*}*/
 
 main {
   position: relative;
@@ -28,68 +212,9 @@ main {
   }
 }
 
-.polaroid {
-  margin: -13px auto 0;
 
-  @include rotate(-2deg);
-}
-
-.polaroid-details,
-.polaroid-booklet {
-  position: relative;
-  z-index: 5;
-  float: left;
-  margin: -50px ($spacing /4) ($spacing /4);
-}
-
-  .polaroid-booklet {
-    @include rotate(2deg);
-
-    @include mq($M) {
-      @include rotate(10deg);
-    }
-
-    @include mq($L) {
-      margin-left: 3em;
-    }
+main.grid-two-thirds {
+  @include mq($STOP) {
+    width: 43em; // 784px /16 = 49
   }
-
-  .polaroid-details {
-    z-index: 1; // keep below the booklet
-    float: right;
-    margin-top: -40px;
-
-    @include rotate(-5deg);
-
-    @include mq($M) {
-      margin-right: $spacing;
-      @include rotate(-10deg);
-    }
-
-    @include mq($L) {
-      float: right;
-      margin-right: 8em;
-      margin-left: 0;
-      @include rotate(-10deg);
-    }
-  }
-
-.polaroid-extra-boot,
-.polaroid-extra-guy {
-  position: absolute;
-  bottom: -120px;
-  left: 160px;
-
-  @include rotate(8deg);
-
-  @include mq($L) {
-    bottom: -320px;
-    left: auto;
-    right: 200px;
-  }
-}
-
-.polaroid-extra-guy {
-  bottom: -100px;
-  right: -200px;
 }

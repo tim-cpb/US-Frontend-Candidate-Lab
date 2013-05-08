@@ -978,7 +978,7 @@ textarea {
   float: none;
 }
 
-@media (min-width: 0) and (max-width: 31em) {
+@media (min-width: 0) and (max-width: 36em) {
   /* line 28, ../sass/_vendor/_grid.generator.scss */
   .s-grid-all, .s-grid-1, .s-grid-2, .s-grid-3, .s-grid-quarter, .s-grid-4, .s-grid-third, .s-grid-5, .s-grid-6, .s-grid-half, .s-grid-7, .s-grid-8, .s-grid-two-thirds, .s-grid-9, .s-grid-three-quarters, .s-grid-10, .s-grid-11, .s-grid-12, .s-grid-whole {
     margin: 0;
@@ -1138,7 +1138,7 @@ textarea {
     display: none;
   }
 }
-@media (min-width: 31em) and (max-width: 47em) {
+@media (min-width: 36em) and (max-width: 51em) {
   /* line 28, ../sass/_vendor/_grid.generator.scss */
   .m-grid-all, .m-grid-1, .m-grid-2, .m-grid-3, .m-grid-quarter, .m-grid-4, .m-grid-third, .m-grid-5, .m-grid-6, .m-grid-half, .m-grid-7, .m-grid-8, .m-grid-two-thirds, .m-grid-9, .m-grid-three-quarters, .m-grid-10, .m-grid-11, .m-grid-12, .m-grid-whole {
     margin: 0;
@@ -1298,7 +1298,7 @@ textarea {
     display: none;
   }
 }
-@media (min-width: 47em) {
+@media (min-width: 51em) {
   /* line 28, ../sass/_vendor/_grid.generator.scss */
   .l-grid-all, .l-grid-1, .l-grid-2, .l-grid-3, .l-grid-quarter, .l-grid-4, .l-grid-third, .l-grid-5, .l-grid-6, .l-grid-half, .l-grid-7, .l-grid-8, .l-grid-two-thirds, .l-grid-9, .l-grid-three-quarters, .l-grid-10, .l-grid-11, .l-grid-12, .l-grid-whole {
     margin: 0;
@@ -1458,18 +1458,12 @@ textarea {
     display: none;
   }
 }
-/* line 22, ../sass/00._global.scss */
-.grid-centered .polaroid {
-  float: none;
-  margin: 0 auto;
-}
-
 /**
  * Box Sizing
  * Apply a natural box layout model to all elements - http://paulirish.com/2012/box-sizing-border-box-ftw/
  * border-box polyfill for IE 6/7: https://github.com/Schepp/box-sizing-polyfill#readme
  */
-/* line 33, ../sass/00._global.scss */
+/* line 26, ../sass/00._global.scss */
 * {
   -moz-box-sizing: border-box;
   -webkit-box-sizing: border-box;
@@ -1477,7 +1471,7 @@ textarea {
   *behavior: url(boxsizing.htc);
 }
 
-/* line 35, ../sass/00._global.scss */
+/* line 28, ../sass/00._global.scss */
 * {
   -webkit-transition-duration: 0.8s;
   -moz-transition-duration: 0.8s;
@@ -1485,42 +1479,35 @@ textarea {
   transition-duration: 0.8s;
 }
 
-/* line 39, ../sass/00._global.scss */
+/* line 30, ../sass/00._global.scss */
 ::-moz-selection {
   background: #383838;
   color: #f7f7f7;
 }
 
-/* line 40, ../sass/00._global.scss */
+/* line 31, ../sass/00._global.scss */
 ::selection {
   background: #383838;
   color: #f7f7f7;
 }
 
-/* line 42, ../sass/00._global.scss */
+/* line 33, ../sass/00._global.scss */
 html,
 body {
-  background: #680707;
+  background: url(../../img/texture-retina-wood.jpg) repeat;
   color: #f7f7f7;
   -webkit-transition-duration: 0;
   -moz-transition-duration: 0;
   -o-transition-duration: 0;
   transition-duration: 0;
 }
-@media (min-width: 31em) {
-  /* line 42, ../sass/00._global.scss */
-  html,
-  body {
-    background: url(../../img/texture-retina-wood.jpg) repeat;
-  }
-}
 
-/* line 53, ../sass/00._global.scss */
+/* line 40, ../sass/00._global.scss */
 img {
   max-width: 100%;
 }
 
-/* line 55, ../sass/00._global.scss */
+/* line 42, ../sass/00._global.scss */
 a {
   color: #4183c4;
   text-decoration: none;
@@ -1542,11 +1529,11 @@ a:hover {
 a:active {
   color: #265079;
 }
-/* line 61, ../sass/00._global.scss */
+/* line 48, ../sass/00._global.scss */
 a:focus {
   outline: none;
 }
-/* line 62, ../sass/00._global.scss */
+/* line 49, ../sass/00._global.scss */
 a:hover, a:active {
   outline: 0;
 }
@@ -1561,7 +1548,7 @@ body {
   /* 15px */
   line-height: 1.6;
 }
-@media (min-width: 31em) {
+@media (min-width: 36em) {
   /* line 9, ../sass/01._typography.scss */
   body {
     font-size: 1em;
@@ -1569,7 +1556,7 @@ body {
     line-height: 1.75;
   }
 }
-@media (min-width: 47em) {
+@media (min-width: 51em) {
   /* line 9, ../sass/01._typography.scss */
   body {
     font-size: 1.0625em;
@@ -1637,24 +1624,24 @@ p {
   white-space: nowrap;
 }
 
-/* line 35, ../sass/02._elements.scss */
+/* line 36, ../sass/02._elements.scss */
 .polaroid-logo h1 {
   line-height: 180px;
   background: url(../../img/img-building.jpg) no-repeat top left;
 }
-/* line 39, ../sass/02._elements.scss */
+/* line 40, ../sass/02._elements.scss */
 .polaroid-logo h1 img {
   padding: 10px;
 }
 
-/* line 45, ../sass/02._elements.scss */
+/* line 47, ../sass/02._elements.scss */
 .polaroid-booklet h2 {
   overflow: hidden;
   text-indent: 100%;
   white-space: nowrap;
   background: url(../../img/img-booklet.jpg) no-repeat top left;
 }
-/* line 50, ../sass/02._elements.scss */
+/* line 52, ../sass/02._elements.scss */
 .polaroid-booklet .icon-copy-booklet {
   position: absolute;
   top: 170px;
@@ -1665,12 +1652,12 @@ p {
   padding: 0;
 }
 
-/* line 63, ../sass/02._elements.scss */
+/* line 66, ../sass/02._elements.scss */
 .polaroid-details .camera {
   line-height: 200px;
   background: url(../../img/img-camera.jpg) no-repeat top left;
 }
-/* line 68, ../sass/02._elements.scss */
+/* line 71, ../sass/02._elements.scss */
 .polaroid-details .icon-copy-address {
   display: inline-block;
   *display: block;
@@ -1681,7 +1668,7 @@ p {
   margin-left: 12px;
   padding: 0;
 }
-/* line 77, ../sass/02._elements.scss */
+/* line 80, ../sass/02._elements.scss */
 .polaroid-details .icon-copy-time {
   position: absolute;
   bottom: 10px;
@@ -1691,14 +1678,13 @@ p {
   padding: 0;
 }
 
-/* line 88, ../sass/02._elements.scss */
+/* line 92, ../sass/02._elements.scss */
 .btn {
   display: inline-block;
   *display: block;
   *zoom: 1;
   color: #f7f7f7;
   line-height: 1;
-  /*text-shadow: -1px -1px 1px #777;*/
   margin: 0 0.75em 0.75em 0;
   padding: 1em 1.5em;
   -webkit-border-radius: 3px;
@@ -1706,12 +1692,11 @@ p {
   -ms-border-radius: 3px;
   -o-border-radius: 3px;
   border-radius: 3px;
-  background: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #f7993e), color-stop(100%, #f68533));
-  background: -webkit-linear-gradient(#f7993e, #f68533);
-  background: -moz-linear-gradient(#f7993e, #f68533);
-  background: -o-linear-gradient(#f7993e, #f68533);
-  background: linear-gradient(#f7993e, #f68533);
-  /*&:hover { background: $link; }*/
+  background: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #3b3b3b), color-stop(100%, #313131));
+  background: -webkit-linear-gradient(#3b3b3b, #313131);
+  background: -moz-linear-gradient(#3b3b3b, #313131);
+  background: -o-linear-gradient(#3b3b3b, #313131);
+  background: linear-gradient(#3b3b3b, #313131);
 }
 /* line 81, ../sass/_modules/_mixins.scss */
 .btn:link {
@@ -1729,27 +1714,296 @@ p {
 .btn:active {
   color: #c4c4c4;
 }
+@media (min-width: 36em) {
+  /* line 92, ../sass/02._elements.scss */
+  .btn {
+    margin-bottom: 0;
+  }
+}
+/* line 105, ../sass/02._elements.scss */
+.btn:hover {
+  text-shadow: none;
+  /*@include background-with-css2-fallback(linear-gradient(#F7993E, #F68533));*/
+  background: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #e27e1e), color-stop(100%, #c05101));
+  background: -webkit-linear-gradient(#e27e1e, #c05101);
+  background: -moz-linear-gradient(#e27e1e, #c05101);
+  background: -o-linear-gradient(#e27e1e, #c05101);
+  background: linear-gradient(#e27e1e, #c05101);
+}
 
-/* line 103, ../sass/02._elements.scss */
+/* line 112, ../sass/02._elements.scss */
 .btn-no {
-  background: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #3b3b3b), color-stop(100%, #313131));
-  background: -webkit-linear-gradient(#3b3b3b, #313131);
-  background: -moz-linear-gradient(#3b3b3b, #313131);
-  background: -o-linear-gradient(#3b3b3b, #313131);
-  background: linear-gradient(#3b3b3b, #313131);
   margin-right: 0;
+}
+
+/* line 115, ../sass/02._elements.scss */
+.btn-rsvp {
+  display: block;
+  text-align: center;
+  letter-spacing: .1em;
+  width: 225px;
+  margin: 0 auto;
+}
+/* line 121, ../sass/02._elements.scss */
+.btn-rsvp:hover {
+  background: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #2b2b2b), color-stop(100%, #212121));
+  background: -webkit-linear-gradient(#2b2b2b, #212121);
+  background: -moz-linear-gradient(#2b2b2b, #212121);
+  background: -o-linear-gradient(#2b2b2b, #212121);
+  background: linear-gradient(#2b2b2b, #212121);
+}
+@media (min-width: 36em) {
+  /* line 115, ../sass/02._elements.scss */
+  .btn-rsvp {
+    display: inline-block;
+    *display: block;
+    *zoom: 1;
+    width: auto;
+    margin: 0;
+  }
 }
 
 /**
  * page.scss
  */
 /* line 10, ../sass/03._page.scss */
+.wrapper {
+  position: relative;
+  overflow: hidden;
+  height: 100%;
+}
+@media (min-width: 51em) {
+  /* line 10, ../sass/03._page.scss */
+  .wrapper {
+    padding-bottom: 4.5em;
+  }
+}
+
+/* line 21, ../sass/03._page.scss */
 header {
   position: relative;
   z-index: 1;
 }
 
-/* line 15, ../sass/03._page.scss */
+/* line 26, ../sass/03._page.scss */
+.container-btn {
+  padding-top: 1.5em;
+}
+@media (min-width: 36em) {
+  /* line 26, ../sass/03._page.scss */
+  .container-btn {
+    position: absolute;
+    bottom: 110px;
+    left: 50%;
+    z-index: 1;
+    padding-left: 148px;
+  }
+}
+@media (min-width: 51em) {
+  /* line 26, ../sass/03._page.scss */
+  .container-btn {
+    display: none;
+  }
+}
+
+/* line 41, ../sass/03._page.scss */
+.container-polaroid {
+  position: relative;
+  z-index: 10;
+}
+
+@media (min-width: 36em) {
+  /* line 46, ../sass/03._page.scss */
+  .container-polaroid-logo {
+    position: relative;
+    z-index: 5;
+    overflow: hidden;
+    clear: both;
+    float: none;
+    margin: 0 auto -104px;
+    width: 561px;
+  }
+}
+@media (min-width: 51em) {
+  /* line 46, ../sass/03._page.scss */
+  .container-polaroid-logo {
+    float: left;
+    width: auto;
+    margin: 0;
+  }
+}
+
+/*.container-polaroid {*/
+/*@include mq($M) {*/
+/*margin-top: -50px;*/
+/*}*/
+/*@include mq($L) {*/
+/*margin-top: -70px;*/
+/*}*/
+/*}*/
+/* line 74, ../sass/03._page.scss */
+.polaroid {
+  position: relative;
+  z-index: 1;
+  float: none;
+  margin: 0 auto;
+  /*margin: -13px auto 0;*/
+}
+@media (min-width: 36em) {
+  /* line 74, ../sass/03._page.scss */
+  .polaroid {
+    -webkit-transform: rotate(-3deg);
+    -moz-transform: rotate(-3deg);
+    -ms-transform: rotate(-3deg);
+    -o-transform: rotate(-3deg);
+    transform: rotate(-3deg);
+  }
+}
+@media (min-width: 51em) {
+  /* line 74, ../sass/03._page.scss */
+  .polaroid {
+    -webkit-transform: rotate(-2deg);
+    -moz-transform: rotate(-2deg);
+    -ms-transform: rotate(-2deg);
+    -o-transform: rotate(-2deg);
+    transform: rotate(-2deg);
+  }
+}
+
+@media (min-width: 51em) {
+  /* line 86, ../sass/03._page.scss */
+  .polaroid-logo {
+    margin: 0;
+    margin-top: 1.5em;
+  }
+}
+
+/* line 93, ../sass/03._page.scss */
+.polaroid-booklet {
+  /*margin-top: -$spacing;*/
+}
+@media (min-width: 36em) {
+  /* line 93, ../sass/03._page.scss */
+  .polaroid-booklet {
+    float: left;
+    margin: 0;
+    -webkit-transform: rotate(2deg);
+    -moz-transform: rotate(2deg);
+    -ms-transform: rotate(2deg);
+    -o-transform: rotate(2deg);
+    transform: rotate(2deg);
+  }
+}
+@media (min-width: 51em) {
+  /* line 93, ../sass/03._page.scss */
+  .polaroid-booklet {
+    -webkit-transform: rotate(1deg);
+    -moz-transform: rotate(1deg);
+    -ms-transform: rotate(1deg);
+    -o-transform: rotate(1deg);
+    transform: rotate(1deg);
+    margin: 60px 0 0 -35px;
+  }
+}
+
+/* line 108, ../sass/03._page.scss */
+.polaroid-details {
+  margin-top: 1.5em;
+  margin-bottom: 0.75em;
+}
+@media (min-width: 36em) {
+  /* line 108, ../sass/03._page.scss */
+  .polaroid-details {
+    float: right;
+    margin: 0;
+  }
+}
+@media (min-width: 51em) {
+  /* line 108, ../sass/03._page.scss */
+  .polaroid-details {
+    float: left;
+    margin: 10px 0 0 15px;
+    -webkit-transform: rotate(2deg);
+    -moz-transform: rotate(2deg);
+    -ms-transform: rotate(2deg);
+    -o-transform: rotate(2deg);
+    transform: rotate(2deg);
+  }
+}
+
+/*.polaroid-details,*/
+/*.polaroid-booklet {*/
+/*position: relative;*/
+/*z-index: 5;*/
+/*float: left;*/
+/*margin: -50px ($spacing /4) ($spacing /4);*/
+/*}*/
+/*.polaroid-booklet {*/
+/*@include rotate(2deg);*/
+/*@include mq($M) {*/
+/*@include rotate(10deg);*/
+/*}*/
+/*@include mq($L) {*/
+/*margin-left: 4em;*/
+/*}*/
+/*}*/
+/*.polaroid-details {*/
+/*z-index: 1; // keep below the booklet*/
+/*float: right;*/
+/*margin-top: -40px;*/
+/*@include rotate(-5deg);*/
+/*@include mq($M) {*/
+/*margin-right: $spacing;*/
+/*@include rotate(-10deg);*/
+/*}*/
+/*@include mq($L) {*/
+/*float: right;*/
+/*margin-right: $spacing *3;*/
+/*margin-left: 0;*/
+/*@include rotate(-10deg);*/
+/*}*/
+/*}*/
+/* line 164, ../sass/03._page.scss */
+.polaroid-extra-boot,
+.polaroid-extra-guy {
+  position: absolute;
+  bottom: 120px;
+  left: 930px;
+  -webkit-transform: rotate(-15deg);
+  -moz-transform: rotate(-15deg);
+  -ms-transform: rotate(-15deg);
+  -o-transform: rotate(-15deg);
+  transform: rotate(-15deg);
+}
+
+/* line 173, ../sass/03._page.scss */
+.polaroid-extra-boot {
+  left: 560px;
+  bottom: 35px;
+  -webkit-transform: rotate(11deg);
+  -moz-transform: rotate(11deg);
+  -ms-transform: rotate(11deg);
+  -o-transform: rotate(11deg);
+  transform: rotate(11deg);
+}
+
+/*.polaroid-extra-boot,*/
+/*.polaroid-extra-guy {*/
+/*position: absolute;*/
+/*bottom: -120px;*/
+/*left: 160px;*/
+/*@include rotate(8deg);*/
+/*@include mq($L) {*/
+/*bottom: -320px;*/
+/*left: auto;*/
+/*right: 200px;*/
+/*}*/
+/*}*/
+/*.polaroid-extra-guy {*/
+/*bottom: -100px;*/
+/*right: -200px;*/
+/*}*/
+/* line 199, ../sass/03._page.scss */
 main {
   position: relative;
   z-index: 5;
@@ -1761,117 +2015,16 @@ main {
   -moz-box-shadow: inset 5px 7px 20px rgba(71, 44, 44, 0.39);
   box-shadow: inset 5px 7px 20px rgba(71, 44, 44, 0.39);
 }
-/* line 25, ../sass/03._page.scss */
+/* line 209, ../sass/03._page.scss */
 main h2, main p {
   text-shadow: 1px 1px 0 #FFF;
 }
 
-/* line 31, ../sass/03._page.scss */
-.polaroid {
-  margin: -13px auto 0;
-  -webkit-transform: rotate(-2deg);
-  -moz-transform: rotate(-2deg);
-  -ms-transform: rotate(-2deg);
-  -o-transform: rotate(-2deg);
-  transform: rotate(-2deg);
-}
-
-/* line 37, ../sass/03._page.scss */
-.polaroid-details,
-.polaroid-booklet {
-  position: relative;
-  z-index: 5;
-  float: left;
-  margin: -50px 0.375em 0.375em;
-}
-
-/* line 45, ../sass/03._page.scss */
-.polaroid-booklet {
-  -webkit-transform: rotate(2deg);
-  -moz-transform: rotate(2deg);
-  -ms-transform: rotate(2deg);
-  -o-transform: rotate(2deg);
-  transform: rotate(2deg);
-}
-@media (min-width: 31em) {
-  /* line 45, ../sass/03._page.scss */
-  .polaroid-booklet {
-    -webkit-transform: rotate(10deg);
-    -moz-transform: rotate(10deg);
-    -ms-transform: rotate(10deg);
-    -o-transform: rotate(10deg);
-    transform: rotate(10deg);
+@media (min-width: 74em) {
+  /* line 216, ../sass/03._page.scss */
+  main.grid-two-thirds {
+    width: 43em;
   }
-}
-@media (min-width: 47em) {
-  /* line 45, ../sass/03._page.scss */
-  .polaroid-booklet {
-    margin-left: 3em;
-  }
-}
-
-/* line 57, ../sass/03._page.scss */
-.polaroid-details {
-  z-index: 1;
-  float: right;
-  margin-top: -40px;
-  -webkit-transform: rotate(-5deg);
-  -moz-transform: rotate(-5deg);
-  -ms-transform: rotate(-5deg);
-  -o-transform: rotate(-5deg);
-  transform: rotate(-5deg);
-}
-@media (min-width: 31em) {
-  /* line 57, ../sass/03._page.scss */
-  .polaroid-details {
-    margin-right: 1.5em;
-    -webkit-transform: rotate(-10deg);
-    -moz-transform: rotate(-10deg);
-    -ms-transform: rotate(-10deg);
-    -o-transform: rotate(-10deg);
-    transform: rotate(-10deg);
-  }
-}
-@media (min-width: 47em) {
-  /* line 57, ../sass/03._page.scss */
-  .polaroid-details {
-    float: right;
-    margin-right: 8em;
-    margin-left: 0;
-    -webkit-transform: rotate(-10deg);
-    -moz-transform: rotate(-10deg);
-    -ms-transform: rotate(-10deg);
-    -o-transform: rotate(-10deg);
-    transform: rotate(-10deg);
-  }
-}
-
-/* line 77, ../sass/03._page.scss */
-.polaroid-extra-boot,
-.polaroid-extra-guy {
-  position: absolute;
-  bottom: -120px;
-  left: 160px;
-  -webkit-transform: rotate(8deg);
-  -moz-transform: rotate(8deg);
-  -ms-transform: rotate(8deg);
-  -o-transform: rotate(8deg);
-  transform: rotate(8deg);
-}
-@media (min-width: 47em) {
-  /* line 77, ../sass/03._page.scss */
-  .polaroid-extra-boot,
-  .polaroid-extra-guy {
-    bottom: -320px;
-    left: auto;
-    right: 200px;
-  }
-}
-
-/* line 92, ../sass/03._page.scss */
-.polaroid-extra-guy {
-  bottom: -100px;
-  right: -200px;
 }
 
 /**

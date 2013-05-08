@@ -18,13 +18,6 @@
 );
 
 
-// Additional Grid Classes
-.grid-centered .polaroid {
-  float: none;
-  margin: 0 auto;
-}
-
-
 /**
  * Box Sizing
  * Apply a natural box layout model to all elements - http://paulirish.com/2012/box-sizing-border-box-ftw/
@@ -32,22 +25,16 @@
  */
 * { -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box;  *behavior: url(boxsizing.htc); }
 
-* {
-  @include transition-duration(0.8s);
-}
+* { @include transition-duration(0.8s); }
 
 ::-moz-selection { background: $bg-dark; color: $text-light; }
 ::selection { background: $bg-dark; color: $text-light; }
 
 html,
 body {
-  background: $bg-dark-red;
+  background: url(../../img/texture-retina-wood.jpg) repeat;
   color: $text-light;
   @include transition-duration(0);
-  
-  @include mq($M) {
-    background: url(../../img/texture-retina-wood.jpg) repeat;
-  }
 }
 
 img { max-width: 100%; }

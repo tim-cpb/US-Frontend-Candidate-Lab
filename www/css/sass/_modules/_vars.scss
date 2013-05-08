@@ -2,14 +2,16 @@
 
 // Set Breakpoints
 $s-breakpoint: 0;
-$m-breakpoint: 31em; // 16px * 31 = 496px
-$l-breakpoint: 47em; // 16px * 47 = 752px
+$m-breakpoint: 36em;    // 16px * 36 = 576px
+$l-breakpoint: 51em;    // 16px * 51 = 816px
+$stop-breakpoint: 74em; // 16px * 74 = 1184px
 
 // Build Media Queries
 //   should match scripts.js
 $S: 'min-width:'+ $s-breakpoint;
 $M: 'min-width:'+ $m-breakpoint;
 $L: 'min-width:'+ $l-breakpoint;
+$STOP: 'min-width:'+ $stop-breakpoint; // Used to stop styles responding at larger breakpoints
 
 
 // Colors
