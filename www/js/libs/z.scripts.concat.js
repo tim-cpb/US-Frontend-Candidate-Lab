@@ -25,6 +25,14 @@ var WebFontConfig = {
   
   var $main = $('main');
 
+
+  // when the user hasn't already scrolled and on a mobile device
+  if (!window.pageYOffset && /mobile/i.test(navigator.userAgent)) {
+    // scroll the page up to hide the URL UI bar
+    window.scrollTo(0,1);
+  }
+
+
   /**
    * RSVP click()
    */
@@ -48,6 +56,8 @@ var WebFontConfig = {
     $('.selected').removeClass('selected');
 
     $btn.addClass('selected');
+
+    $('html, body').animate({scrollTop: $('.btn-no').offset().top}, 600, 'linear');
 
     if ($btn.hasClass('btn-yes')) {
       msgText += ' We look forward to seeing you, don\'t forget your camera!';
