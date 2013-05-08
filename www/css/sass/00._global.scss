@@ -1,0 +1,50 @@
+/**
+ * global.scss
+ */
+@import '_modules/vars';
+@import '_modules/mixins';
+@import '_vendor/grid.generator';
+@import "compass/css3/transition";
+
+
+// Generate the grid
+@include gridGenerator(
+  ($s-breakpoint, $m-breakpoint, $l-breakpoint), // breakpoints
+  'em',         // breakpoint type 'px' or 'em'
+  12,           // number of grid columns
+  $spacing,     // outer padding
+  ($spacing /2) // inner padding
+  // use default prefixes
+);
+
+
+/**
+ * Box Sizing
+ * Apply a natural box layout model to all elements - http://paulirish.com/2012/box-sizing-border-box-ftw/
+ * border-box polyfill for IE 6/7: https://github.com/Schepp/box-sizing-polyfill#readme
+ */
+* { -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box;  *behavior: url(boxsizing.htc); }
+
+* { @include transition-duration(0.8s); }
+
+::-moz-selection { background: $bg-dark; color: $text-light; }
+::selection { background: $bg-dark; color: $text-light; }
+
+html,
+body {
+  background: url(../../img/texture-retina-wood.jpg) repeat;
+  color: $text-light;
+  @include transition-duration(0);
+}
+
+img { max-width: 100%; }
+
+a {
+  color: $link;
+  text-decoration: none;
+  @include link-all-pseudo-elements($link);
+
+  /* &:focus { outline: thin dotted; } */
+  &:focus { outline: none; }
+  &:hover, &:active { outline: 0; }
+}

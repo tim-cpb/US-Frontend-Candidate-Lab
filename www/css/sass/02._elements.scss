@@ -1,0 +1,141 @@
+/**
+ * elements.scss
+ */
+@import '_modules/vars';
+@import '_modules/mixins';
+@import 'compass/css3/border-radius';
+@import 'compass/css3/images';
+@import 'compass/css3/box-shadow';
+
+
+// The following defines how the .polaroid looks
+// .polaroid layout and rotation is in 03._page.scss
+.polaroid {
+  color: $text-dark;
+  background: $bg-light;
+  width: 225px + 18px + 18px;
+  padding: 18px 18px 60px;
+
+  @include box-shadow(3px 5px 10px 0 #333);
+  @include box-shadow(3px 5px 10px 0 rgba(10,10,10,.6));
+
+  & .polaroid-image {
+    position: relative;
+    z-index: 5;
+    width: 225px;
+    height: 200px;
+    padding: 0;
+  }
+
+  & .icon { @include image-replacement(); }
+}
+
+
+// Logo
+.polaroid-logo {
+  & h1 {
+    line-height: 180px; // Adjust to visually center
+    background: url(../../img/img-building.jpg) no-repeat top left;
+
+    & img { padding: 10px; }
+  }
+}
+
+
+// Booklet
+.polaroid-booklet {
+  & h2 {
+    @include image-replacement();
+    background: url(../../img/img-booklet.jpg) no-repeat top left;
+  }
+
+  & .icon-copy-booklet {
+    position: absolute;
+    top: 170px;
+    left: 32px;
+    z-index: 5;
+    width: 210px;
+    height: 43px;
+    padding: 0;
+  }
+}
+
+
+// Details
+.polaroid-details {
+  & .camera {
+    line-height: 200px;
+    background: url(../../img/img-camera.jpg) no-repeat top left;
+  }
+
+  & .icon-copy-address {
+    @include inline-block();
+    width: 202px;
+    height: 68px;
+    line-height: 68px;
+    margin-left: 12px;
+    padding: 0;
+  }
+
+  & .icon-copy-time {
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+    width: 220px;
+    height: 40px;
+    padding: 0;
+  }
+}
+
+
+// Buttons
+.btn {
+  @include inline-block();
+  color: $text-light;
+  line-height: 1;
+  margin: 0 ($spacing /2) ($spacing /2) 0;
+  padding: ($spacing /1.5) $spacing;
+
+  @include border-radius(3px);
+  @include background-with-css2-fallback(linear-gradient(#3B3B3B, #313131));
+  @include link-all-pseudo-elements($text-light);
+
+  @include mq($M) { margin-bottom: 0; }
+
+  &:hover {
+    text-shadow: none;
+    @include background-with-css2-fallback(linear-gradient(#E27E1E, #C05101));
+  }
+
+  &.selected {
+    @include background-with-css2-fallback(linear-gradient($text-success, #144E19));
+  }
+}
+
+.btn-no { margin-right: 0; }
+
+// RSVP Button
+.btn-rsvp {
+  display: block;
+  text-align: center;
+  letter-spacing: .1em;
+  width: 225px;
+  margin: 0 auto;
+  &:hover { @include background-with-css2-fallback(linear-gradient(#2B2B2B, #212121)); }
+
+  @include mq($M) {
+    @include inline-block();
+    width: auto;
+    margin: 0;
+  }
+}
+
+
+.message {
+  color: $text-success;
+  background: $bg-success;
+  border: 1px solid $border-success;
+  margin: 0 0 ($spacing /2);
+
+  @include border-radius(6px);
+}

@@ -1,0 +1,53 @@
+/**
+ * typography.scss
+ */
+@import '_modules/vars';
+@import '_modules/mixins';
+@import 'compass/css3/font-face';
+
+
+body {
+  font-family: Helvetica, Arial, sans-serif;
+
+  // Set font sizes and line height across breakpoints for readability 
+
+    font-size: $font-size-base *0.9375; /* 15px */
+    line-height: get-multiplier(24, $font-size-base *0.9375);
+
+  @include mq($M) {
+    font-size: $font-size-base;         /* 16px */
+    line-height: get-multiplier(28, $font-size-base);
+  }
+
+  @include mq($L) {
+    font-size: $font-size-base *1.0625; /* 17px */
+    line-height: get-multiplier(32, $font-size-base *1.0625);
+  }
+}
+
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: Helvetica, Arial, sans-serif; 
+  margin: 0;
+  padding: 0;
+}
+
+h1 {
+  font-size: $font-size-h1;   // 40px
+  line-height:    get-multiplier(48, $font-size-h1);
+  padding-bottom: get-multiplier(16, $font-size-h1) +em;
+}
+
+h2 {
+  font-family: 'Oswald', Helvetica, Arial, sans-serif; 
+  font-size: $font-size-h2;   // 32px
+  font-weight: normal;
+  line-height:    get-multiplier(40, $font-size-h2);
+  padding-bottom: get-multiplier(8,  $font-size-h2) +em;
+}
+
+
+p {
+  margin: 0;
+  padding: 0 0 $spacing;
+}

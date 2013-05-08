@@ -1,0 +1,154 @@
+/**
+ * page.scss
+ */
+@import '_modules/vars';
+@import '_modules/mixins';
+@import 'compass/css3/box-shadow';
+@import 'compass/css3/transform';
+
+
+.wrapper {
+  position: relative;
+  overflow: hidden;
+  height: 100%;
+  
+  @include mq($L) {
+    padding-bottom: $spacing *3;
+  }
+}
+
+
+header {
+  position: relative;
+  z-index: 1; // keep below the main content
+}
+
+.container-btn {
+  padding-top: $spacing;
+
+  @include mq($M) {
+    position: absolute;
+    bottom: 110px;
+    left: 50%;
+    z-index: 1;
+    display: none;
+    padding-left: 148px;
+  }
+}
+
+
+.container-polaroid {
+  position: relative;
+  z-index: 10;
+}
+
+.container-polaroid-logo {
+  @include mq($M) {
+    position: relative;
+    z-index: 5;
+    overflow: hidden;
+    clear: both;
+    float: none;
+    margin: 0 auto -104px;
+    width: 561px; // pixel value because the polaroids are pixel values
+  }
+
+  @include mq($L) {
+    float: left;
+    width: auto;
+    margin: 0;
+  }
+}
+
+
+.polaroid {
+  position: relative;
+  z-index: 1;
+  float: none;
+  margin: 0 auto;
+
+  @include mq($M) { @include rotate(-3deg); } 
+  @include mq($L) { @include rotate(-2deg); }
+}
+
+.polaroid-logo {
+  @include mq($L) {
+    margin: 0;
+    margin-top: $spacing;
+  }
+}
+
+.polaroid-booklet {
+  @include mq($M) {
+    float: left;
+    margin: 0;
+    @include rotate(2deg);
+  }
+
+  @include mq($L) {
+    @include rotate(1deg);
+    margin: 60px 0 0 -35px;
+  }
+}
+
+.polaroid-details {
+  margin-top: $spacing;
+  margin-bottom: $spacing /2;
+
+  @include mq($M) {
+    float: right;
+    margin: 0;
+  }
+
+  @include mq($L) {
+    float: left;
+    margin: 10px 0 0 15px;
+    @include rotate(2deg);
+  }
+}
+
+
+.container-polaroid-extras {
+  display: none;
+
+  @include mq($L) { display: block; }
+}
+
+.polaroid-extra-boot,
+.polaroid-extra-guy {
+  position: absolute;
+  bottom: 120px;
+  left: 930px;
+
+  @include rotate(-15deg);
+}
+
+.polaroid-extra-boot {
+  left: 560px;
+  bottom: 35px;
+  @include rotate(11deg);
+}
+
+
+main {
+  position: relative;
+  z-index: 5; // move above the header
+  color: $text-dark;
+  background: $bg-light url($img-texture-light);
+  border: 1px solid $bg-light;
+  border-left: none;
+
+  @include box-shadow(inset 5px 7px 20px rgba(71, 44, 44, 0.39));
+
+  & h2,
+  & p {
+    text-shadow: 1px 1px 0 #FFF;
+  }
+}
+
+
+main.grid-two-thirds {
+  @include mq($STOP) {
+    width: 43em; // 784px /16 = 49
+  }
+}
